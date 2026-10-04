@@ -11,7 +11,7 @@ document.querySelectorAll("[data-theme]").forEach((button) => {
       item.classList.toggle("active", selected);
       item.setAttribute("aria-pressed", String(selected));
     });
-    preview.src = `assets/nextflux-live-${button.dataset.theme}.jpg`;
+    preview.src = `assets/nextflux-${button.dataset.theme}.png`;
     preview.alt = `Nextflux ${button.dataset.theme === "dark" ? "深色" : "浅色"}真实界面：分类订阅、文章列表与图文阅读三栏布局`;
   });
 });

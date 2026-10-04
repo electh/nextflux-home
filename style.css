@@ -271,24 +271,16 @@ em {
   width: 100%;
   padding: 0;
   display: block;
-  aspect-ratio: 1512 / 715;
   position: relative;
-  overflow: hidden;
-  background: #e6e3dc;
-  border-radius: 12px;
-  border: 1px solid #deded5;
-  box-shadow:
-    0 34px 60px -40px #30332e77,
-    0 7px 15px -10px #30332e44;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .screen > img,
 .night-shot > img {
-  position: absolute;
   width: 100%;
-  max-width: none;
   height: auto;
-  left: 0;
-  top: 0;
   display: block;
 }
 .screen > img {
@@ -673,14 +665,7 @@ h2 {
 }
 .night-shot {
   position: relative;
-  overflow: hidden;
-  aspect-ratio: 1512 / 715;
-  width: 690px;
-  border-radius: 15px;
-  border: 1px solid #ffffff16;
-  box-shadow: 0 35px 65px #0004;
-  transform: perspective(1100px) rotateY(-9deg) rotateZ(-3deg);
-  transform-origin: center left;
+  width: 100%;
 }
 .features {
   padding-bottom: 87px;
@@ -1096,9 +1081,6 @@ dialog::backdrop {
   .night-copy h2 {
     font-size: 31px;
   }
-  .night-shot {
-    width: 590px;
-  }
   .shortcut-card {
     padding: 25px;
   }
@@ -1185,9 +1167,6 @@ dialog::backdrop {
   }
   .hero-showcase {
     margin-top: 40px;
-  }
-  .screen {
-    border-radius: 6px;
   }
   .showcase-top {
     font-size: 8px;
@@ -1317,11 +1296,6 @@ dialog::backdrop {
   }
   .night-foot {
     font-size: 8px;
-  }
-  .night-shot {
-    width: 115%;
-    transform: rotate(-3deg);
-    margin-left: 5%;
   }
   .feature-grid {
     grid-template-columns: repeat(2, 1fr);
