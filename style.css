@@ -271,7 +271,7 @@ em {
   width: 100%;
   padding: 0;
   display: block;
-  aspect-ratio: 1.573;
+  aspect-ratio: 1512 / 715;
   position: relative;
   overflow: hidden;
   background: #e6e3dc;
@@ -284,11 +284,11 @@ em {
 .screen > img,
 .night-shot > img {
   position: absolute;
-  width: 109.6%;
+  width: 100%;
   max-width: none;
   height: auto;
-  left: -4.69%;
-  top: -5%;
+  left: 0;
+  top: 0;
   display: block;
 }
 .screen > img {
@@ -674,7 +674,7 @@ h2 {
 .night-shot {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1.573;
+  aspect-ratio: 1512 / 715;
   width: 690px;
   border-radius: 15px;
   border: 1px solid #ffffff16;

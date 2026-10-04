@@ -24,7 +24,7 @@ npm run build
 - Docker 部署弹窗与复制命令。
 - FAQ 折叠面板、锚点导航、手机适配、键盘焦点与减弱动画。
 
-截图与图标取自本地 Nextflux 项目；功能文案依据该项目 README 和中文配置。文章排版示例为门户演示文案。Nextflux 本身需要 Miniflux 服务，在线入口指向 https://nextflux.pages.dev/。
+截图于 2026-10-04 从正在运行的本地 Nextflux（localhost:5173）实时拍摄，展示 Anna Shtraus on Glass 的实际文章与 Stone／Nord 主题。图标取自本地 Nextflux 项目；功能文案依据该项目 README 和中文配置。文章排版示例为门户演示文案。Nextflux 本身需要 Miniflux 服务，在线入口指向 https://nextflux.pages.dev/。
 
 设计参考：
 
