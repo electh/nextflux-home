@@ -25,17 +25,42 @@
           <a href="#experience">阅读体验</a><a href="#features">功能</a
           ><a href="#start">开始使用</a>
         </nav>
-        <a
-          class="nav-github"
-          href="https://github.com/electh/nextflux"
-          target="_blank"
-          rel="noopener"
-          ><svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
-            /></svg
-          ><span>GitHub</span><span class="external">↗</span></a
-        >
+        <div class="nav-actions">
+          <a
+            class="nav-github"
+            href="https://github.com/electh/nextflux"
+            target="_blank"
+            rel="noopener"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+              /></svg
+            ><span>GitHub</span><span class="external">↗</span></a
+          >
+          <div
+            class="language-picker"
+            role="group"
+            aria-label="Language / 语言"
+          >
+            <button
+              type="button"
+              data-language="zh"
+              aria-pressed="true"
+              lang="zh-CN"
+            >
+              中文
+            </button>
+            <span aria-hidden="true">/</span>
+            <button
+              type="button"
+              data-language="en"
+              aria-pressed="false"
+              lang="en"
+            >
+              EN
+            </button>
+          </div>
+        </div>
       </div>
     </header>
     <main id="main">
@@ -81,11 +106,7 @@
               </button>
             </div>
           </div>
-          <button
-            class="screen"
-            id="hero-screen"
-            aria-label="放大 Nextflux 界面截图"
-          >
+          <div class="screen" id="hero-screen">
             <img
               id="preview"
               src="assets/nextflux-light.png"
@@ -93,8 +114,8 @@
               width="2552"
               height="1758"
               fetchpriority="high"
-            /><span class="zoom-hint">查看大图 <span>↗</span></span>
-          </button>
+            />
+          </div>
           <div class="showcase-bottom">
             <span>Nextflux 实际界面</span
             ><span>好内容，值得一个好界面。 <span class="coral">✳</span></span>
@@ -160,8 +181,10 @@
             <article class="detail-card">
               <div class="line-icon">
                 <svg viewBox="0 0 32 32" aria-hidden="true">
-                  <rect x="4" y="6" width="24" height="20" rx="4" />
-                  <path d="M11 6v20m7-20v20" />
+                  <path
+                    d="M16 8c-3-2-7-3-12-2v20c5-1 9 0 12 2 3-2 7-3 12-2V6c-5-1-9 0-12 2Z"
+                  />
+                  <path d="M16 8v20M8 11l4 1M8 16l4 1M20 12l4-1M20 17l4-1" />
                 </svg>
               </div>
               <h3>一眼找到。<br />一路读下去。</h3>
@@ -188,16 +211,35 @@
             </article>
           </div>
         </div>
+        <div class="reading-settings">
+          <div class="reading-settings-copy">
+            <span class="small-label">你的阅读，你来调</span>
+            <h3>
+              从标题到正文。<br /><span class="muted">每一处，都合心意。</span>
+            </h3>
+            <p>
+              字体、字号、行高、正文宽度，按自己的习惯调整。标题对齐、正文两端对齐与阅读导航，也有各自的开关。
+            </p>
+            <span class="settings-note">真实界面 · 阅读设置</span>
+          </div>
+          <img
+            src="assets/reading-settings.png"
+            alt="Nextflux 阅读设置：标题对齐与大小、字体、两端对齐、行高、字号、正文宽度和阅读导航"
+            width="1400"
+            height="1200"
+            loading="lazy"
+          />
+        </div>
       </section>
       <section class="night-section" id="themes">
         <div class="night-inner">
           <div class="night-copy">
             <div class="section-label">
-              <span>02 / 每一种阅读心情</span><span>DAY & NIGHT</span>
+              <span>02 / 每一种阅读空间</span><span>ADAPTS TO YOU</span>
             </div>
-            <h2>从第一杯咖啡，<br />读到最后一盏灯。</h2>
+            <h2>大屏从容展开。<br />小屏依然好读。</h2>
             <p>
-              明亮、温润，或安静的深色。<br />用喜欢的主题，搭配此刻的光线。
+              订阅、列表与正文，随可用空间调整。<br />从三栏浏览，到专注阅读，总有舒服的布局。
             </p>
             <div class="swatches" aria-label="应用内提供的主题">
               <span><i style="--swatch: #fff"></i>浅色</span
@@ -209,14 +251,122 @@
               >多种主题 · 跟随系统切换 · 独立设置日间与夜间主题</span
             >
           </div>
-          <div class="night-shot">
-            <img
-              src="assets/nextflux-dark.png"
-              alt="Nextflux 的深色阅读主题"
-              loading="lazy"
-              width="2552"
-              height="1758"
-            />
+          <div
+            class="layout-carousel"
+            role="region"
+            aria-roledescription="轮播"
+            aria-label="不同宽度下的 Nextflux 布局"
+            tabindex="0"
+          >
+            <div class="carousel-stage" id="layout-slides">
+              <figure
+                class="layout-slide"
+                role="group"
+                aria-roledescription="幻灯片"
+                aria-label="第 1 张，共 4 张：宽屏三栏"
+              >
+                <img
+                  src="assets/layout-wide.png"
+                  alt="宽屏 Nextflux：订阅、文章列表和正文同时展示"
+                  width="2552"
+                  height="1758"
+                  loading="lazy"
+                />
+              </figure>
+              <figure
+                class="layout-slide"
+                role="group"
+                aria-roledescription="幻灯片"
+                aria-label="第 2 张，共 4 张：紧凑双栏"
+                hidden
+              >
+                <img
+                  src="assets/layout-compact.png"
+                  alt="紧凑宽度的 Nextflux：收起订阅侧栏，保留文章列表和正文"
+                  width="2054"
+                  height="1758"
+                  loading="lazy"
+                />
+              </figure>
+              <figure
+                class="layout-slide"
+                role="group"
+                aria-roledescription="幻灯片"
+                aria-label="第 3 张，共 4 张：订阅与列表"
+                hidden
+              >
+                <img
+                  src="assets/layout-list.png"
+                  alt="较窄宽度的 Nextflux：订阅与文章列表并排展示"
+                  width="1526"
+                  height="1758"
+                  loading="lazy"
+                />
+              </figure>
+              <figure
+                class="layout-slide"
+                role="group"
+                aria-roledescription="幻灯片"
+                aria-label="第 4 张，共 4 张：专注正文"
+                hidden
+              >
+                <img
+                  src="assets/layout-reader.png"
+                  alt="窄屏 Nextflux：正文占满阅读区域，专注图文内容"
+                  width="1372"
+                  height="1758"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="carousel-controls">
+              <button
+                class="carousel-arrow"
+                id="layout-prev"
+                aria-label="上一张布局截图"
+                aria-controls="layout-slides"
+              >
+                ←
+              </button>
+              <p id="layout-caption" aria-live="polite" aria-atomic="true">
+                <span id="layout-name">宽屏三栏</span
+                ><span id="layout-count">01 / 04</span>
+              </p>
+              <button
+                class="carousel-arrow"
+                id="layout-next"
+                aria-label="下一张布局截图"
+                aria-controls="layout-slides"
+              >
+                →
+              </button>
+            </div>
+            <div class="carousel-dots" role="group" aria-label="选择布局截图">
+              <button
+                data-layout="0"
+                aria-label="展示宽屏三栏"
+                aria-pressed="true"
+                aria-controls="layout-slides"
+              ></button>
+              <button
+                data-layout="1"
+                aria-label="展示紧凑双栏"
+                aria-pressed="false"
+                aria-controls="layout-slides"
+              ></button>
+              <button
+                data-layout="2"
+                aria-label="展示订阅与列表"
+                aria-pressed="false"
+                aria-controls="layout-slides"
+              ></button>
+              <button
+                data-layout="3"
+                aria-label="展示专注正文"
+                aria-pressed="false"
+                aria-controls="layout-slides"
+              ></button>
+            </div>
           </div>
         </div>
       </section>
@@ -225,6 +375,49 @@
           <span>03 / 不止于好看</span><span>THOUGHTFULLY BUILT</span>
         </div>
         <h2>轻盈的外表。<br /><span class="muted">周全的内在。</span></h2>
+        <div class="miniflux-spotlight">
+          <div class="miniflux-copy">
+            <span class="miniflux-eyebrow">MINIFLUX · 高级功能适配</span>
+            <h3>强大的订阅引擎。<br /><span>顺手的高级控制。</span></h3>
+            <p class="miniflux-intro">
+              在 Nextflux 里直接配置 Miniflux
+              的高级订阅选项。从抓取到筛选，让每一个订阅更合你的心意。
+            </p>
+            <dl class="miniflux-capabilities">
+              <div>
+                <dt>全文抓取，更完整。</dt>
+                <dd>开启自动抓取原文，配合 Scraper rules 自定义内容抓取。</dd>
+              </div>
+              <div>
+                <dt>保留与屏蔽，更精准。</dt>
+                <dd>
+                  通过 Keep rules 和 Block rules
+                  筛选文章，把注意力留给想读的内容。
+                </dd>
+              </div>
+              <div>
+                <dt>重写与隐藏，更自在。</dt>
+                <dd>
+                  用 Rewrite rules
+                  调整内容；全局隐藏指定订阅，让日常列表更清爽。
+                </dd>
+              </div>
+            </dl>
+            <span class="miniflux-footnote"
+              >规则由 Miniflux 执行，设置在 Nextflux 中管理。</span
+            >
+          </div>
+          <figure class="miniflux-preview">
+            <img
+              src="assets/miniflux-advanced.png"
+              alt="Nextflux 的 Miniflux 高级订阅设置：抓取、保留、屏蔽、重写规则与全局隐藏"
+              width="1024"
+              height="1310"
+              loading="lazy"
+            />
+            <figcaption>真实界面 · 高级订阅选项</figcaption>
+          </figure>
+        </div>
         <div class="feature-grid">
           <article>
             <div class="feature-symbol">↻</div>
@@ -252,7 +445,14 @@
             <span>个性化阅读</span>
           </article>
           <article>
-            <div class="feature-symbol">✧</div>
+            <div class="feature-symbol">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"
+                />
+                <path d="M14 3v6h6M8 13h8M8 17h5" />
+              </svg>
+            </div>
             <h3>长文章，先理清脉络。</h3>
             <p>
               可配置 AI 总结，连接自己的 OpenAI 或兼容 API。是否使用，由你决定。
@@ -260,7 +460,13 @@
             <span>可选 AI 总结</span>
           </article>
           <article>
-            <div class="feature-symbol">☆</div>
+            <div class="feature-symbol">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"
+                />
+              </svg>
+            </div>
             <h3>值得收藏，就留住。</h3>
             <p>
               收藏喜欢的文章，或保存到 Miniflux
@@ -269,7 +475,12 @@
             <span>收藏与分享</span>
           </article>
           <article>
-            <div class="feature-symbol">◎</div>
+            <div class="feature-symbol">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="6.5" />
+              </svg>
+            </div>
             <h3>打开浏览器，就在。</h3>
             <p>
               以桌面阅读为核心，也支持移动浏览器与 PWA
@@ -277,6 +488,29 @@
             </p>
             <span>网页与 PWA</span>
           </article>
+        </div>
+        <div class="search-showcase">
+          <img
+            src="assets/search.png"
+            alt="Nextflux 搜索界面：跨订阅查找 iPhone 相关文章，可切换文章与订阅搜索"
+            width="1400"
+            height="1000"
+            loading="lazy"
+          />
+          <div class="search-showcase-copy">
+            <span class="small-label">好内容，随时找回来</span>
+            <h3>
+              一个关键词。<br /><span class="muted">串起你的订阅世界。</span>
+            </h3>
+            <p>
+              跨订阅查找文章，也能切换到订阅搜索。用方向键选择，按回车打开，思路不用停下来。
+            </p>
+            <div class="search-key-hint">
+              <kbd>↑</kbd><kbd>↓</kbd><span>选择</span><kbd>↵</kbd
+              ><span>打开</span>
+            </div>
+            <span class="settings-note">真实界面 · 文章与订阅搜索</span>
+          </div>
         </div>
       </section>
       <section class="ownership section">
@@ -432,16 +666,34 @@
         <span>一个开源的 Miniflux 客户端。</span
         ><span>Made for the joy of reading. <span class="coral">✳</span></span>
       </div>
+      <div class="footer-wordmark" aria-hidden="true">
+        <svg viewBox="0 0 1100 155" focusable="false">
+          <defs>
+            <linearGradient
+              id="footer-ink"
+              gradientUnits="userSpaceOnUse"
+              x1="0"
+              y1="35"
+              x2="0"
+              y2="155"
+            >
+              <stop offset="0%" stop-color="#89917f" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="#89917f" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <text
+            x="550"
+            y="205"
+            text-anchor="middle"
+            textLength="1010"
+            lengthAdjust="spacingAndGlyphs"
+            fill="url(#footer-ink)"
+          >
+            nextflux
+          </text>
+        </svg>
+      </div>
     </footer>
-    <dialog id="image-dialog" class="image-dialog">
-      <button class="dialog-close" aria-label="关闭截图">×</button
-      ><img
-        id="dialog-image"
-        src="assets/nextflux-light.png"
-        alt="Nextflux 界面完整截图"
-      />
-      <p>Nextflux 真实界面截图</p>
-    </dialog>
     <dialog id="deploy-dialog" class="deploy-dialog">
       <button class="dialog-close" aria-label="关闭部署说明">×</button
       ><span class="small-label">给阅读一个自己的家</span>
@@ -476,6 +728,7 @@
       </p>
       <p id="copy-status" role="status"></p>
     </dialog>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
