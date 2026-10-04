@@ -275,7 +275,7 @@ em {
   position: relative;
   overflow: hidden;
   background: #e6e3dc;
-  border-radius: 20px;
+  border-radius: 12px;
   border: 1px solid #deded5;
   box-shadow:
     0 34px 60px -40px #30332e77,
@@ -1187,7 +1187,7 @@ dialog::backdrop {
     margin-top: 40px;
   }
   .screen {
-    border-radius: 10px;
+    border-radius: 6px;
   }
   .showcase-top {
     font-size: 8px;
