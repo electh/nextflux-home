@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f7f4" />
+    <meta
+      name="description"
+      content="Nextflux，一个为专注阅读而生的 Miniflux 客户端。优雅排版、丰富主题、快捷操作，让你的订阅与好奇心自由流动。"
+    />
+    <title>Nextflux — 让阅读，回到阅读。</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到正文</a>
+    <header class="header">
+      <div class="nav-wrap">
+        <a class="brand" href="#" aria-label="Nextflux 首页"
+          ><img src="assets/logo.png" alt="" width="31" height="31" /><span
+            >nextflux<span class="brand-dot">.</span></span
+          ></a
+        >
+        <nav aria-label="主导航">
+          <a href="#experience">阅读体验</a><a href="#features">功能</a
+          ><a href="#start">开始使用</a>
+        </nav>
+        <a
+          class="nav-github"
+          href="https://github.com/electh/nextflux"
+          target="_blank"
+          rel="noopener"
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+            /></svg
+          ><span>GitHub</span><span class="external">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="live-dot"></span> 为 MINIFLUX 而生的 RSS 阅读器
+          </div>
+          <h1>让阅读，<br /><em>回到阅读。</em></h1>
+          <p class="hero-description">
+            少一些喧嚣，多一些好内容。<br />把喜欢的作者、博客与资讯，安放在一个舒服的地方。
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="https://nextflux.pages.dev/"
+              target="_blank"
+              rel="noopener"
+              >打开 Nextflux <span>↗</span></a
+            ><a class="text-link" href="#experience"
+              >探索阅读体验 <span>↓</span></a
+            >
+          </div>
+          <p class="hero-note">开源 · 自托管 · 为你的好奇心留一点空间</p>
+        </div>
+        <div class="hero-showcase">
+          <div class="showcase-top">
+            <span><span class="tiny-dot"></span> 你的订阅，你的节奏。</span>
+            <div class="theme-picker" role="group" aria-label="预览界面主题">
+              <button class="active" data-theme="light" aria-pressed="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4" />
+                  <path
+                    d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"
+                  /></svg
+                >日间</button
+              ><button data-theme="dark" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 15a8.5 8.5 0 0 1-11-11A8.5 8.5 0 1 0 20 15Z"
+                  /></svg
+                >夜间
+              </button>
+            </div>
+          </div>
+          <button
+            class="screen"
+            id="hero-screen"
+            aria-label="放大 Nextflux 界面截图"
+          >
+            <img
+              id="preview"
+              src="assets/nextflux-light.png"
+              alt="Nextflux 实际界面：左侧分类订阅，中间文章列表，右侧显示 Magical light 图文文章"
+              width="2622"
+              height="1752"
+              fetchpriority="high"
+            /><span class="zoom-hint">查看大图 <span>↗</span></span>
+          </button>
+          <div class="showcase-bottom">
+            <span>真实的 Nextflux 界面</span
+            ><span>好内容，值得一个好界面。 <span class="coral">✳</span></span>
+          </div>
+        </div>
+      </section>
+      <div class="intro-strip">
+        <span
+          >一个轻巧的客户端。<br /><strong
+            >一整片属于你的阅读世界。</strong
+          ></span
+        >
+        <div><span class="strip-icon">◈</span> Miniflux 驱动</div>
+        <div><span class="strip-icon">⌘</span> 桌面优先</div>
+        <div><span class="strip-icon">↗</span> 开源，自由部署</div>
+      </div>
+      <section class="experience section" id="experience">
+        <div class="section-label">
+          <span>01 / 阅读体验</span><span>MADE FOR READING</span>
+        </div>
+        <div class="experience-heading">
+          <h2>界面退后一步。<br /><span class="muted">内容向前一点。</span></h2>
+          <p>
+            阅读的乐趣，藏在细节里。<br />从文字的呼吸感，到每一次顺手的切换，<br />Nextflux
+            让你自然地读下去。
+          </p>
+        </div>
+        <div class="reading-grid">
+          <article class="reading-card">
+            <div class="card-topline">
+              <span class="tiny-dot"></span
+              ><span>按你的习惯，排好每一个字。</span
+              ><span class="card-index">01</span>
+            </div>
+            <div class="article-demo" id="article-demo">
+              <div class="article-meta">
+                THE QUIET WEB <span>·</span> 4 分钟阅读
+              </div>
+              <h3>给好奇心，<br />留一扇窗。</h3>
+              <div class="article-rule"></div>
+              <p>
+                网络很大，但你不必听见所有声音。订阅喜欢的作者，让值得读的文字，慢慢来到你面前。
+              </p>
+              <p>
+                一杯咖啡，一段留白。阅读可以简单到，只剩下你和眼前的好内容。
+              </p>
+            </div>
+            <div class="type-controls" role="group" aria-label="体验阅读字体">
+              <span>试试你的阅读风格</span
+              ><button data-font="serif" class="active" aria-pressed="true">
+                宋体</button
+              ><button data-font="sans" aria-pressed="false">黑体</button>
+              <div class="type-size">
+                <button id="font-smaller" aria-label="减小示例字号">A−</button
+                ><button id="font-larger" aria-label="增大示例字号">A+</button>
+              </div>
+            </div>
+            <p class="demo-label">
+              排版交互示意 · 实际应用支持字体、字号、行高与正文宽度设置
+            </p>
+          </article>
+          <div class="reading-side">
+            <article class="detail-card">
+              <div class="line-icon">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <rect x="4" y="6" width="24" height="20" rx="4" />
+                  <path d="M11 6v20m7-20v20" />
+                </svg>
+              </div>
+              <h3>一眼找到。<br />一路读下去。</h3>
+              <p>
+                订阅、列表、正文，三栏各就其位。<br />在熟悉的布局里，把注意力留给文章。
+              </p>
+              <div class="mini-layout" aria-hidden="true">
+                <div><i></i><i></i><i></i><i></i></div>
+                <div><i></i><i></i><i></i></div>
+                <div><b>Aa</b><i></i><i></i><i></i></div>
+              </div>
+            </article>
+            <article class="shortcut-card">
+              <div>
+                <span class="small-label">少一点点击，多一点流畅</span>
+                <h3>让手指跟上思绪。</h3>
+                <p>
+                  键盘快捷键、滚动标记已读。<br />好用的细节，让阅读不被打断。
+                </p>
+              </div>
+              <div class="keys" aria-hidden="true">
+                <kbd>J</kbd><kbd>K</kbd><kbd>⌘</kbd>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="night-section" id="themes">
+        <div class="night-inner">
+          <div class="night-copy">
+            <div class="section-label">
+              <span>02 / 每一种阅读心情</span><span>DAY & NIGHT</span>
+            </div>
+            <h2>从第一杯咖啡，<br />读到最后一盏灯。</h2>
+            <p>
+              明亮、温润，或安静的深色。<br />用喜欢的主题，搭配此刻的光线。
+            </p>
+            <div class="swatches" aria-label="应用内提供的主题">
+              <span><i style="--swatch: #fff"></i>浅色</span
+              ><span><i style="--swatch: #dedbd4"></i>石灰</span
+              ><span><i style="--swatch: #29292c"></i>深色</span
+              ><span><i style="--swatch: #48576b"></i>深蓝</span>
+            </div>
+            <span class="night-foot"
+              >多种主题 · 跟随系统切换 · 独立设置日间与夜间主题</span
+            >
+          </div>
+          <div class="night-shot">
+            <img
+              src="assets/nextflux-dark.png"
+              alt="Nextflux 的深色阅读主题"
+              loading="lazy"
+              width="2622"
+              height="1752"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="features section" id="features">
+        <div class="section-label">
+          <span>03 / 不止于好看</span><span>THOUGHTFULLY BUILT</span>
+        </div>
+        <h2>轻盈的外表。<br /><span class="muted">周全的内在。</span></h2>
+        <div class="feature-grid">
+          <article>
+            <div class="feature-symbol">↻</div>
+            <h3>好内容，自动到来。</h3>
+            <p>
+              后台自动同步，自定义刷新间隔。打开阅读器，继续发现你关心的新鲜事。
+            </p>
+            <span>自动同步</span>
+          </article>
+          <article>
+            <div class="feature-symbol">▤</div>
+            <h3>订阅多，也井井有条。</h3>
+            <p>
+              分类整理、订阅发现、搜索与隐藏。支持 OPML
+              导入导出，轻松带上你的阅读世界。
+            </p>
+            <span>订阅管理</span>
+          </article>
+          <article>
+            <div class="feature-symbol">Aa</div>
+            <h3>用舒服的方式读。</h3>
+            <p>
+              自定义字体、字号、行高和正文宽度。大图查看支持触控手势，细节也值得看清。
+            </p>
+            <span>个性化阅读</span>
+          </article>
+          <article>
+            <div class="feature-symbol">✧</div>
+            <h3>长文章，先理清脉络。</h3>
+            <p>
+              可配置 AI 总结，连接自己的 OpenAI 或兼容 API。是否使用，由你决定。
+            </p>
+            <span>可选 AI 总结</span>
+          </article>
+          <article>
+            <div class="feature-symbol">☆</div>
+            <h3>值得收藏，就留住。</h3>
+            <p>
+              收藏喜欢的文章，或保存到 Miniflux
+              配置的第三方服务，让好内容有个去处。
+            </p>
+            <span>收藏与分享</span>
+          </article>
+          <article>
+            <div class="feature-symbol">◎</div>
+            <h3>打开浏览器，就在。</h3>
+            <p>
+              以桌面阅读为核心，也支持移动浏览器与 PWA
+              安装。中、英、土、法，多语言可选。
+            </p>
+            <span>网页与 PWA</span>
+          </article>
+        </div>
+      </section>
+      <section class="ownership section">
+        <div class="ownership-copy">
+          <div class="section-label"><span>04 / 你的订阅，由你做主</span></div>
+          <h2>阅读很自由。<br />数据也应该。</h2>
+          <p>
+            Nextflux 专注做好阅读界面，Miniflux 负责订阅与数据。<br />连接你自己的服务器，把阅读世界握在自己手里。
+          </p>
+          <a
+            href="https://github.com/electh/nextflux"
+            class="text-link"
+            target="_blank"
+            rel="noopener"
+            >代码公开，欢迎一起打磨 <span>↗</span></a
+          >
+        </div>
+        <div class="connection-diagram">
+          <div class="connection-app">
+            <img
+              src="assets/logo.png"
+              alt="Nextflux"
+              width="56"
+              height="56"
+            /><strong>Nextflux</strong><span>你的阅读体验</span>
+          </div>
+          <div class="connection-line">
+            <span>Miniflux API</span>
+            <div><i></i><i></i><i></i></div>
+          </div>
+          <div class="connection-server">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="9" y="7" width="30" height="14" rx="4" />
+              <rect x="9" y="27" width="30" height="14" rx="4" />
+              <path d="M16 14h.01M16 34h.01m13-20h4m-4 20h4" /></svg
+            ><strong>Miniflux</strong><span>你的服务器与数据</span>
+          </div>
+          <p>前端轻巧，后端自主。</p>
+        </div>
+      </section>
+      <section class="start-section" id="start">
+        <div class="start-inner">
+          <div class="start-header">
+            <div>
+              <div class="section-label">
+                <span>05 / 开始你的阅读时光</span>
+              </div>
+              <h2>下一篇好文章，<br /><em>从这里开始。</em></h2>
+            </div>
+            <img
+              src="assets/logo.png"
+              width="92"
+              height="92"
+              alt=""
+              class="start-logo"
+            />
+          </div>
+          <div class="start-grid">
+            <article>
+              <span class="step-number">01</span>
+              <h3>已经有 Miniflux？</h3>
+              <p>
+                打开 Nextflux，填写服务器地址，<br />使用 API Token
+                或用户名与密码登录。
+              </p>
+              <a
+                class="button primary"
+                href="https://nextflux.pages.dev/"
+                target="_blank"
+                rel="noopener"
+                >开始阅读 <span>↗</span></a
+              >
+            </article>
+            <article>
+              <span class="step-number">02</span>
+              <h3>想部署自己的版本？</h3>
+              <p>
+                支持 Docker 与 Cloudflare Pages。<br />一个命令，给阅读一个自己的家。
+              </p>
+              <button class="deploy-link" id="open-deploy">
+                查看部署方式 <span>↗</span>
+              </button>
+            </article>
+          </div>
+          <p class="start-note">
+            Nextflux 是 Miniflux 的客户端，使用前需要一个可访问的 Miniflux
+            服务。
+          </p>
+        </div>
+      </section>
+      <section class="faq section">
+        <div>
+          <div class="section-label"><span>还有一点，你可能想知道。</span></div>
+          <h2>读之前的<br />小问题。</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Nextflux 是独立的 RSS 服务吗？<span>+</span></summary>
+            <p>
+              Nextflux 是 Miniflux 的网页客户端。订阅抓取、文章与阅读状态由
+              Miniflux 保存，Nextflux 提供阅读和订阅管理界面。你需要先准备
+              Miniflux 服务器。
+            </p>
+          </details>
+          <details>
+            <summary>需要下载安装吗？<span>+</span></summary>
+            <p>
+              使用现代浏览器打开即可。Nextflux 也支持
+              PWA，可通过支持此功能的浏览器安装到桌面或主屏幕。
+            </p>
+          </details>
+          <details>
+            <summary>可以从其他阅读器迁移订阅吗？<span>+</span></summary>
+            <p>
+              可以。将原阅读器的订阅导出为 OPML，再在 Nextflux 中导入。Nextflux
+              也支持 OPML 导出与设置备份；文章内容与阅读状态迁移需要备份
+              Miniflux 数据库。
+            </p>
+          </details>
+          <details>
+            <summary>在手机上也能使用吗？<span>+</span></summary>
+            <p>
+              支持移动浏览器，但项目以桌面体验为核心。如果你偏好手机原生体验，也可以用支持
+              Miniflux 的 Unread、Reeder 等客户端连接同一服务器。
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <a class="brand" href="#"
+          ><img src="assets/logo.png" alt="" width="28" height="28" /><span
+            >nextflux<span class="brand-dot">.</span></span
+          ></a
+        >
+        <p>为好内容。为好奇心。为阅读本身。</p>
+        <div>
+          <a
+            href="https://github.com/electh/nextflux"
+            target="_blank"
+            rel="noopener"
+            >GitHub ↗</a
+          ><a
+            href="https://github.com/electh/nextflux#-deployment"
+            target="_blank"
+            rel="noopener"
+            >部署文档 ↗</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>一个开源的 Miniflux 客户端。</span
+        ><span>Made for the joy of reading. <span class="coral">✳</span></span>
+      </div>
+    </footer>
+    <dialog id="image-dialog" class="image-dialog">
+      <button class="dialog-close" aria-label="关闭截图">×</button
+      ><img
+        id="dialog-image"
+        src="assets/nextflux-light.png"
+        alt="Nextflux 界面完整截图"
+      />
+      <p>Nextflux 真实界面截图</p>
+    </dialog>
+    <dialog id="deploy-dialog" class="deploy-dialog">
+      <button class="dialog-close" aria-label="关闭部署说明">×</button
+      ><span class="small-label">给阅读一个自己的家</span>
+      <h2>部署 Nextflux</h2>
+      <p>
+        已有 Miniflux 服务？运行下面的命令，然后访问
+        <code>http://localhost:3000</code>。
+      </p>
+      <div class="code-wrap">
+        <pre><code>docker run -d --name nextflux \
+  -p 3000:3000 \
+  --restart unless-stopped \
+  electh/nextflux:latest</code></pre>
+        <button id="copy-command">复制命令</button>
+      </div>
+      <div class="deploy-options">
+        <a
+          href="https://github.com/electh/nextflux#cloudflare-pages-deployment-standalone"
+          target="_blank"
+          rel="noopener"
+          >Cloudflare Pages 部署 <span>↗</span></a
+        ><a
+          href="https://github.com/electh/nextflux/blob/main/compose.yml"
+          target="_blank"
+          rel="noopener"
+          >同时部署 Miniflux <span>↗</span></a
+        >
+      </div>
+      <p class="deploy-note">
+        首次登录时，输入 Miniflux
+        服务器地址及登录凭据。跨域访问需要服务器允许相应的请求。
+      </p>
+      <p id="copy-status" role="status"></p>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
